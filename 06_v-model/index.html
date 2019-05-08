@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>01</title>
+</head>
+
+<body>
+    <div id="app">
+        <!-- v-modele可以操作的元素 input，teatarea，select -->
+        <!-- 由于数据池中sex属性为famale，链接了vale中的值，所以默认圆点框就点在“女”上 -->
+        <label>
+            男
+            <input type="radio" v-model="sex" value="male">
+        </label>
+        
+        <label>
+            女
+            <input type="radio" v-model="sex" value="female">
+        </label><br>
+        {{sex}}
+        <br>
+        <br>
+        <!-- 当改为复选框时的效果 -->
+        <label>
+                男
+                <input type="checkbox" v-model="tendsex" value="male">
+            </label>
+            
+            <label>
+                女
+                <input type="checkbox" v-model="tendsex" value="female">
+            </label><br>
+            {{tendsex}}
+        <br>
+        <br>
+        <!-- textarea效果 -->
+        <textarea v-model="article"></textarea>
+        <br>
+        <br>
+        <!-- select中的v-model -->
+        <div>你来自哪里</div>
+        <select name="" id="" v-model="from">
+            <option value="1">木星</option>
+            <option value="2">土星</option>
+            <option value="3">M78</option>
+        </select>
+        <br>
+        <div>你要去哪里</div>
+        <!-- 多选 -->
+        <select name="" id="" v-model="dest" multiple>
+            <option value="1">木星</option>
+            <option value="2">土星</option>
+            <option value="3">M78</option>
+        </select>
+        {{dest}}
+    </div>
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+    <script src="js//main.js"></script>
+</body>
+
+</html>
