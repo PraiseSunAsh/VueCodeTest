@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>01</title>
+</head>
+
+<body>
+    <div id="app">
+        <div v-if="role=='admin'||role=='super_admin'">
+            管理员你好！
+        </div>
+        <div v-else-if="role=='hr'">
+            待查看简历列表
+            </div>
+        <div v-else>
+            您没有权限访问此页面
+        </div>
+    </div>
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+    <script src="js//main.js"></script>
+</body>
+
+</html>
