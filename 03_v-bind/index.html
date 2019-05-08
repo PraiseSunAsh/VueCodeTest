@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        .active{
+            background-color: #a10;
+        }
+    </style>
+    <title>01</title>
+</head>
+<body>
+    <div id="app">
+        <!-- v-bind绑定一个属性 -->
+        <a v-bind:href="url">点我</a>
+        <!-- 当数据池中的isActive为真时，添加active类 -->
+        <a v-bind:class="{active:isActive}">点我</a>
+
+    </div>
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+    <script src="js//main.js"></script>
+</body>
+</html>
