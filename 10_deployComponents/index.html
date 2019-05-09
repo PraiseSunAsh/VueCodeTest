@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>01</title>
+    <style>
+        .liked {
+            background-color: deeppink;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <like></like>   
+    </div>
+    <template id="but">
+        <button :class="{liked:liked}" @click="toggleLike">
+            👍{{likeCount}}
+        </button>
+    </template>
+
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+    <script src="js//main.js"></script>
+</body>
+
+</html>
