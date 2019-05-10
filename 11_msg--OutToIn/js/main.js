@@ -3,7 +3,7 @@ Vue.component('alert', {
     template: '<button @click="onClick">弹弹弹</button>',
     //自定义元素的方法
     props:['msg'],
-    //自定义组件的属性
+    //在使用父组件传递过来的属性之前，要先在子组件的props中定义一下，才能接受到外界的信息
     methods: {
         onClick: function () {
             alert(this.msg);
