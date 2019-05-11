@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>01</title>
+    <style>
+        .panel {
+            max-width: 300px;
+            border: 2px solid #999;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        .panel .title {
+            border-bottom: 1px solid #999;
+        }
+
+        .panel .footer {
+            border-top: 1px solid #999;
+        }
+
+        .panel>*{
+            padding: 15px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="app">
+        <panel>
+            <span slot="content">hahahhahah</span>
+            <span slot="title">标题（通过插槽）</span>
+        </panel>
+    </div>
+
+    <!-- 自定义组件模板 -->
+    <template id="panel-tpl">
+            <div class="panel">
+                <div class="title"><slot name="title"></slot></div>
+                <div class="content">
+                    <!-- 你想让哪个部分的信息变成动态，就在那个位置添加一个插槽 -->
+                    <!-- 内容区添加一个插槽 -->
+                    <slot name="content"></slot>
+                </div>
+                <div class="footer">
+                    <!-- 如果有默认信息的话在上面不用引用，默认显示 -->
+                    <slot name="footer">页脚（slot默认信息）</slot>
+                </div>
+            </div>
+        </template>
+
+
+    <script src="js//vue.js"></script>
+    <script src="js//main.js"></script>
+</body>
+
+</html>
