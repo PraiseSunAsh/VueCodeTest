@@ -1,0 +1,40 @@
+*{
+    background-color: rgba(0,0,0,0.1);
+    box-sizing: border-box;
+    position: relative;
+}
+
+.wrap{
+    max-width: 500px;
+    margin: 0 auto;
+
+}
+.navbar, .header{
+    text-align: center;
+}
+.navbar{
+    background: #db4c3f;
+    text-align: center;
+    color: #f7f3ea;
+    padding: 10px 0;
+}
+.navbar h1{
+    font-size: 24px;
+    margin: 0;
+}
+
+.header{
+    padding: 20px 0;
+    color: #555;
+    font-size: 18px;
+}
+
+input,button{
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 3px;
+    padding: 5px 10px;
+}
+input{
+    display: block;
+    width: 100%;
+}
