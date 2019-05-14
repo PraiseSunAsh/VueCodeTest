@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todo-list</title>
+    <link rel="stylesheet" href="lib/normalize.css">
+    <link rel="stylesheet" href="css//main.css">
+</head>
+<body>
+    <div id="main">
+        <div class="navbar">
+            <h1>小清单</h1>
+        </div>
+        <div class="header">
+            deadline才是第一生产力。—— 鲁迅
+        </div>
+            <!-- 当提交的时候就执行add -->
+        <form @submit.prevent="merge" id="task-form">
+            <!-- Q：这里有个疑问，如果@submit.prevent填在别的位置点击后就刷新了，具体原因尚不明确 -->
+            <div class="wrap">
+                <!-- input与current.title进行了联通 -->
+                <input v-model="current.title" id="task-input" type="text" >
+                <!-- 这里有一个小细节，当存在一个单行的文本输入控件时，是可以用sibmit来提交的 -->
+                <button type="submit">submit</button>
+            </div>  
+        </form>
+
+        <!-- 未完成的部分 -->
+        <div class="task-list">
+            <div class="wrap">
+                    待办事项
+                    <!-- 除了value，index也是可以遍历的 -->
+                <div v-for="(x,index) in list" class="item">
+                   {{x.title}}
+                   <button @click="remove(index)">删除</button>
+                   <button @click="current = x">更新</button>
+                   <!-- 这样写挺好，至少知道要更新哪个元素了 -->
+                </div>
+            </div>
+        </div>
+
+        <!-- 完成的部分 -->
+        <div class="task-list">
+            <div class="wrap">
+                    完成
+                <div class="complete">
+                    hahahhahahhah
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="lib//vue.js"></script>
+    <script src="js//myStorage.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

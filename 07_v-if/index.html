@@ -19,6 +19,11 @@
         <div v-else>
             您没有权限访问此页面
         </div>
+
+            <div v-for="(x, index) in list">{{x}}
+                <input v-if="show[index]" type="text">
+            </div>
+        
     </div>
     <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
     <script src="js//main.js"></script>
