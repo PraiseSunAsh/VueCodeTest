@@ -18,11 +18,14 @@
                    //看来我要滚回去看下闭包了
                    //卧槽这里的index为啥不是布尔值？？？？？
                     var index = this.list.findIndex(function(item){
-                        return item.id == ID;
+                        // return item.id == ID;
+                        var a = (item.id == ID);
+                        return a;
                     });
-                    this.list[index] = Object.assign({},this.current);
+                    Vue.set(this.list, index, Object.assign({},this.current));
                     
-                    Vue.set(this.list, index, copy(this.current));
+                    
+                    
                 } else {
                     // 如果不存在就不添加
                     if (!this.current.title) return;

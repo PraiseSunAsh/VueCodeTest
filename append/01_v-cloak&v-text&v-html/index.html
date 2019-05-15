@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        [v-cloak]{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!-- 可解决闪烁问题 -->
+        <p v-cloak>{{msg}}</p>
+        
+        <h4 v-text="msg">这里的内容不会显示，被msg覆盖了</h4>
+        <!-- 页面中渲染html -->
+        <div v-html="msg2"></div>
+    </div>
+
+    <script src="vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -17,6 +17,8 @@
         <a v-bind:href="url">点我</a>
         <!-- 当数据池中的isActive为真时，添加active类 -->
         <a v-bind:class="{active:isActive}">点我</a>
+        <!-- 绑定title属性，让其中title值替换为msg -->
+        <input type="button" value="按钮" v-bind:title="msg">
 
     </div>
     <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>

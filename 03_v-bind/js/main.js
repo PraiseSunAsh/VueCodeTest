@@ -4,5 +4,6 @@ var app = new Vue({
     data:{
         url:'http://www.baidu.com',
         isActive:true,
+        msg:'鼠标上冒泡'
     },
 });
