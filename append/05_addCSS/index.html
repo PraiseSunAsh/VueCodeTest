@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .red{
+           color: red;
+        }
+        .thin{
+            font-weight: 200;
+        }
+        .italic{
+            font-style: italic;
+        }
+        .active{
+            letter-spacing: 0.5em;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!-- 通过传递数组设置样式 -->
+        <h1 :class="['red','thin']">这是个H1</h1>
+        <br>
+        <!-- 在数组中可以用三元表达式 -->
+        <h1 :class="['red','thin',flag?'active':null]">这是个H1</h1>
+        <!-- 也可以传进去对象，如果value为true，则执行 -->
+        <h1 :class="['red','thin',{'active':flag}]">这是个H1</h1>
+        <br>
+        <!-- 直接使用对象决定添加哪些属性 -->
+        <h1 :class="classObj">这是个H1</h1>
+        <br>
+    </div>
+
+    <script src="vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
