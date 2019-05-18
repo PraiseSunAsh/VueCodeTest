@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .inner{
+            height: 150px;
+            background-color: darkcyan;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+
+        <div class="inner" @click="divHandler">
+            <!-- 添加了stop就只会执行子元素的click事件 -->
+            <input type="button" value="戳他" @click.stop="btnHandler">
+        </div>
+        <br>
+        <div class="inner" @click.capture="divHandler">
+            <!-- 添加capture就从从外向内依次执行click -->
+            <input type="button" value="戳他" @click="btnHandler">
+        </div>
+        <br>
+        <div class="inner" @click.self="divHandler">
+            <!-- 添加self就只执行自己的click -->
+            <input type="button" value="戳他" @click.self="btnHandler">
+        </div><br>
+        <div class="inner" @click.self.once="divHandler">
+            <!-- 添加once就只执行一次自己的事件-->
+            <input type="button" value="戳他" @click.self.once="btnHandler">
+        </div>
+    </div>
+
+    <script src="vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
