@@ -19,6 +19,7 @@
             <!-- 当提交的时候就执行add -->
         <form @submit.prevent="add" id="task-form">
             <!-- Q：这里有个疑问，如果@submit.prevent填在别的位置点击后就刷新了，具体原因尚不明确 -->
+            <!-- 傻啊，@submit.prevent是form才有的，放别的地方肯定刷新啊！--07.18 -->
             <div class="wrap">
                 <!-- input与current.title进行了联通 -->
                 <input v-model="current.title" id="task-input" type="text" >
