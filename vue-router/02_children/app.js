@@ -22,7 +22,7 @@ let routes = [
     },
     {
         path: '/user/:name',
-        component: {
+        component: { 
             // 获取路由路径中的参数
             template: `
             <div>
