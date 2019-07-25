@@ -1,6 +1,6 @@
 //自定义属性
 Vue.directive('pin', function (el,binding) {
-    // console.log(binding.value);//第二个传的参数是自定义属性的value
+    // console.log(binding.value);//第二个传的参数是自定义属性的value和一些其他的附带信息
     if(binding.value){
         el.style.position = 'fixed';
         el.style.top = '10px';

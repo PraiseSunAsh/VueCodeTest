@@ -17,4 +17,4 @@ new Vue({
         price:10,
         length:10
     }
-})
+}) 

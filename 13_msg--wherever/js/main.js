@@ -1,3 +1,4 @@
+//创建一个Vue示例作为事件的调度器
 var event = new Vue();
 
 Vue.component('whh', {
@@ -7,7 +8,7 @@ Vue.component('whh', {
     </div>`,
     methods: {
         onChange:function(){
-            //发射消息,消息的名字叫👇
+            //发射消息,消息的名字叫huahua-said-something
             event.$emit('huahua-said-something',this.i_said);
         }
     },
