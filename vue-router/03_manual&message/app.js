@@ -22,7 +22,6 @@ let routes = [
     },
     {
         path: '/user/:name',
-        name:'user',
         component: { 
             // 获取路由路径中的参数
             template: `
@@ -58,17 +57,4 @@ const router = new VueRouter({
 new Vue({
     el: '#app',
     router: router,
-    methods: {
-        skip: function(){
-            //手动跳转到关于页面
-            router.push('/about');
-        },
-        skip1: function(){
-            router.push({
-                name:'user',
-                //把whh作为参数传入名称为user的路由 
-                params:{name:"whh"}
-            })
-        }
-    },
 })
