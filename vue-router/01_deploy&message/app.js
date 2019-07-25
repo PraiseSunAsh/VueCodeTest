@@ -20,6 +20,17 @@ let routes = [
             `
         }   
     }, 
+    {
+        path: '/user/:name',
+        component: {
+            // 获取路由路径中的参数
+            template: `
+            <div>
+                <h1>你现在进入到了{{$route.params.name}}的详情页</h1>
+            </div>  
+            `
+        }   
+    }, 
 ];
 //通过VueRouter的构造器传过去
 const router = new VueRouter({
@@ -29,5 +40,4 @@ const router = new VueRouter({
 new Vue({
     el:'#app',
     router:router,
-
 })
