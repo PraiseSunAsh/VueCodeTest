@@ -1,5 +1,6 @@
 //定义路由结构
 let routes = [
+
     {
         path: '/',
         component: {
@@ -8,6 +9,51 @@ let routes = [
                 <h1>你现在进入到了首页</h1>
             </div>  
             `
+        }
+    },
+    {
+        path:'/user',
+        //这样做的意义是什么？为什么不把sidebar和content的结构写到一起呢？
+        components:{
+            sidebar:{   
+                template:`
+                <div>
+                    <ul>
+                        <li>用户列表</li>
+                        <li>权限管理</li>
+                    </ul>
+                </div>
+                `
+            },
+            content:{
+                template:`
+                <div>
+                   这里面是主要内容
+                </div>
+                `
+            }
+        }
+    },
+    {
+        path:'/post',
+        components:{
+            sidebar:{   
+                template:`
+                <div>
+                    <ul>
+                        <li>帖子列表</li>
+                        <li>帖子管理</li>
+                    </ul>
+                </div>
+                `
+            },
+            content:{
+                template:`
+                <div>
+                   这里面是帖子的主要内容
+                </div>
+                `
+            }
         }
     },
     {

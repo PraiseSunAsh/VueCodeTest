@@ -9,18 +9,18 @@
 </head>
 
 <body>
-    
       
     <div id="app">
         <div>
-            <router-link to="/">首页</router-link>
-            <router-link to="/user">用户管理</router-link>
-            <router-link to="/post">帖子管理</router-link>
+            <!-- 到首页 -->
+            <router-link to="/">首页</router-link>  
+            <router-link to="/about">关于</router-link>
+            <router-link to="/user/jason">jason</router-link>
+            <router-link to="/user/john">john</router-link>
         </div>
         <div>
+            <!-- 渲染鼠标点击link后的视图 -->
             <router-view></router-view>
-            <router-view name="sidebar"></router-view>
-            <router-view name="content"></router-view>
         </div>
     </div>
     <script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
